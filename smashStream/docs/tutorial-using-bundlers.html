@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/nodecg/nodecg/master/src/favicon.ico">
+    <title>Using Bundlers - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    
+    <link type="text/css" rel="stylesheet" href="styles/github-corner.css">
+    
+</head>
+<body>
+
+<a href="https://github.com/nodecg/nodecg" class="github-corner" aria-label="View source on Github">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Tutorials</li><li class="nav-item"><a href="tutorial-1_what-is-nodecg.html">What is NodeCG?</a></li><li class="nav-item"><a href="tutorial-2_concepts-and-terminology.html">Concepts and Terminology</a></li><li class="nav-item"><a href="tutorial-3_quick-start.html">Quick Start</a></li><li class="nav-item"><a href="tutorial-4_security.html">Security & Authentication</a></li><li class="nav-item"><a href="tutorial-5_manifest.html">package.json Manifest</a></li><li class="nav-item"><a href="tutorial-6_nodecg-configuration.html">NodeCG Configuration</a></li><li class="nav-item"><a href="tutorial-7_using-npm.html">Using npm Dependencies</a></li><li class="nav-item"><a href="tutorial-8_using-bower.html">Using Bower Dependencies</a></li><li class="nav-item"><a href="tutorial-9_bundle-configuration.html">Bundle Configuration</a></li><li class="nav-item"><a href="tutorial-assets.html">Assets</a></li><li class="nav-item"><a href="tutorial-custom-routes.html">Custom Routes</a></li><li class="nav-item"><a href="tutorial-making-dialogs.html">Making Dashboard Dialogs</a></li><li class="nav-item"><a href="tutorial-migrating-0.7-to-0.8.html">Migrating from 0.7 to 0.8</a></li><li class="nav-item"><a href="tutorial-migrating-0.8-to-0.9.html">Migrating from 0.8 to 0.9</a></li><li class="nav-item"><a href="tutorial-migrating-0.9-to-1.0.html">Migrating from 0.9 to 1.0</a></li><li class="nav-item"><a href="tutorial-mounts.html">Mount folders as endpoints</a></li><li class="nav-item"><a href="tutorial-performance-tips.html">Performance Tips</a></li><li class="nav-item"><a href="tutorial-portable-nodecg.html">Portable NodeCG</a></li><li class="nav-item"><a href="tutorial-replicant-schemas.html">Replicant Validation</a></li><li class="nav-item"><a href="tutorial-screenshot-testing.html">Screenshot Testing Graphics</a></li><li class="nav-item"><a href="tutorial-sentry.html">Error Reporting with Sentry.io</a></li><li class="nav-item"><a href="tutorial-sounds.html">Sounds</a></li><li class="nav-item"><a href="tutorial-typescript.html">TypeScript</a></li><li class="nav-item"><a href="tutorial-using-bundlers.html">Using Bundlers</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="NodeCG.html">NodeCG</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#.waitForReplicants">waitForReplicants</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#findCue">findCue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#getDialog">getDialog</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#getDialogDocument">getDialogDocument</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#getSocketIOServer">getSocketIOServer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#listenFor">listenFor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#log">log</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#mount">mount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#playSound">playSound</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#readReplicant">readReplicant</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#Replicant">Replicant</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#sendMessage">sendMessage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#sendMessageToBundle">sendMessageToBundle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#stopAllSounds">stopAllSounds</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#stopSound">stopSound</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#unlisten">unlisten</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">Using Bundlers</h1>
+    
+
+    <section>
+
+<header>
+    
+</header>
+
+<article>
+    <p>If you don't know why you should use bundlers, read up
+<a href="https://webpack.js.org/concepts/why-webpack/">Why webpack</a>.</p>
+<p>There are currently three JavaScript bundlers.</p>
+<ul>
+<li><a href="https://github.com/webpack/webpack">webpack</a>
+<ul>
+<li>By far the most used bundler with a lot of community made extensions</li>
+</ul>
+</li>
+<li><a href="https://github.com/rollup/rollup">rollup</a>
+<ul>
+<li>Primarily used by libraries like React, Vue</li>
+</ul>
+</li>
+<li><a href="https://github.com/parcel-bundler/parcel">parcel</a>
+<ul>
+<li>New bundler famous for zero-config, and super fast building process</li>
+</ul>
+</li>
+</ul>
+<p>These bundlers allows you to</p>
+<ul>
+<li>write modular, organised source code</li>
+<li>treat CSS, images, or any sort of files like JavaScript module</li>
+<li>use npm packages for front-end (dashboard/graphics)</li>
+<li>use JSX/TSX, Vue single file component</li>
+<li>write in other languages like TypeScript</li>
+<li>and many more</li>
+</ul>
+<p>This tutorial goes through the setup using parcel.</p>
+<h2 id="directory-structure">Directory Structure</h2>
+<p>Basically you will have parcel to output the whole <code>dashboard</code> and <code>graphics</code>
+directory. Your project would look like this</p>
+<pre class="prettyprint source"><code>foo-layouts
+|- extension
+|- schemas
+|- src
+|- package.json
+</code></pre>
+<p>When you run parcel, it will make <code>dashboard</code> and <code>graphics</code> directory and
+output bundle result into them.</p>
+<p>(After running parcel)</p>
+<pre class="prettyprint source"><code>foo-layouts
+|- extension
+|- schemas
+|- src
+|- package.json
+|- dashboard (built)
+  |- index.html
+  |- styles.8jx17sx.css
+  |- main.7x2hdjs.js
+|- graphics (built)
+  |- ds1.html
+  |- sd1.html
+  |- styles.03nsh2s.css
+  |- ds1.rssiahs.js
+  |- sd1.4jc71nx.js
+  |- background.d8frsis.png
+</code></pre>
+<p>The random string for each generated files are automatically generated to
+refresh cache when the files change.</p>
+<h2 id="setup">Setup</h2>
+<p>As I said, parcel is (literally) zero-configuration required. It even installs
+missing packages for you if there is any.</p>
+<h3 id="add-parcel-to-your-bundle">Add parcel to your bundle</h3>
+<h4 id="locally">Locally</h4>
+<pre class="prettyprint source lang-sh"><code>npm install --save-dev parcel-bundler
+# or
+yarn add -D parcel-bundler
+</code></pre>
+<p>The <code>parcel</code> command will be available locally. You can run it either adding
+npm scripts, or <code>npx parcel</code>/<code>yarn parcel</code>.</p>
+<h4 id="globally">Globally</h4>
+<pre class="prettyprint source lang-sh"><code>npm install -g parcel-bundler
+# or
+yarn global add parcel-bundler
+</code></pre>
+<p>With this, <code>parcel</code> command should be available globally. Just run <code>parcel</code> to
+run the bundler.</p>
+<h3 id="make-an-entrypoint">Make an entrypoint</h3>
+<p>When building front-end, HTML file is usually used as entrypoint. You can just
+use your HTML file with your scripts and stylesheets imported.</p>
+<pre class="prettyprint source lang-html"><code>&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;meta charset=&quot;utf-8&quot; />
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./styles.css&quot;>
+  &lt;/head>
+
+  &lt;body>
+    &lt;div id=&quot;tech&quot;>&lt;/div>
+    &lt;!-- Or a lot of pre-defined elements -->
+    &lt;script src=&quot;./index.js&quot;>&lt;/script>
+  &lt;/body>
+&lt;/html>
+</code></pre>
+<p>The entrypoint HTML file will also be compiled in the bundler. So you can many
+kind of files in the <code>script</code> tag. Parcel will automatically detect file format
+and use appropriate library/compiler to bundle the file.</p>
+<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;./main.coffee&quot;>&lt;/script>
+</code></pre>
+<pre class="prettyprint source lang-html"><code>&lt;script src=&quot;./app.tsx&quot;>&lt;/script>
+</code></pre>
+<p>Or the entrypoint doesn't even have to be an HTML file. For example, you can use
+Pug to have common parts of HTML file into one file.</p>
+<pre class="prettyprint source lang-pug"><code>doctype html
+html
+  head
+    title graphics-ds
+    include lib/common.pug
+  body
+    div(id=&quot;ds&quot;)
+    script(src=&quot;./views/ds.ts&quot;)
+</code></pre>
+<h3 id="run-the-command">Run the command</h3>
+<p>For development, with file change detection and hot-reloading:</p>
+<pre class="prettyprint source lang-sh"><code>parcel watch src/dashboard/index.html --out-dir dashboard --public-url ./
+</code></pre>
+<p>For production build, with optimized output:</p>
+<pre class="prettyprint source lang-sh"><code>parcel build src/dashboard/index.html --out-dir dashboard --public-url ./
+</code></pre>
+<p>(Replace <code>src/dashboard/index.html</code> with your entrypoint files.)</p>
+<p>You can use glob pattern to use multiple entrypoints, if you have multiple pages
+to compile</p>
+<pre class="prettyprint source lang-sh"><code>parcel build src/graphics/*.html --out-dir dashboard --public-url ./
+</code></pre>
+<p>Details described in <a href="https://parceljs.org/cli.html">the reference</a>.</p>
+<h3 id="recommended-configuration">Recommended Configuration</h3>
+<p>Even though it already works for most cases (!), a bit of configuration might be
+recommended/required.</p>
+<h4 id="browserslist">browserslist</h4>
+<p>Parcel uses <a href="https://babeljs.io/">babel</a> out of box, and the default supported
+browsers are <code>&gt;0.25%</code> which includes old browsers like IE.</p>
+<p>Considering how NodeCG is used, it's the best to target only modern browsers or
+just Chrome. To do so, add <code>browserslist</code> property to <code>package.json</code>.</p>
+<p>For example,</p>
+<pre class="prettyprint source lang-json"><code>{
+  // ...
+  &quot;browserslist&quot;: &quot;last 2 chrome versions&quot;,
+  &quot;nodecg&quot;: //...
+}
+</code></pre>
+<p>Refer to <a href="https://github.com/browserslist/browserslist#full-list">this page</a> for
+detailed <code>browserslist</code> syntax.</p>
+<h3 id="going-further">Going further</h3>
+<p>Due to the huge amount of features parcel offers out of box, at this point you
+already have a lot more options for your front-end development. For example:</p>
+<ul>
+<li>React development with JSX/TSX</li>
+<li>Vue single file component</li>
+<li>TypeScript or other alternative languages</li>
+</ul>
+<p>Also, if your project becomes too advanced for parcel to handle, you can switch
+to webpack. It produces a bit more optimized code, and has a lot more features
+supported.</p>
+</article>
+
+</section>
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Mon Jan 27 2020 20:48:17 GMT-0800 (Pacific Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/currentpage.js"></script>
+</body>
+</html>

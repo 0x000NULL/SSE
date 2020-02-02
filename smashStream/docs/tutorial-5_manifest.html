@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/nodecg/nodecg/master/src/favicon.ico">
+    <title>package.json Manifest - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    
+    <link type="text/css" rel="stylesheet" href="styles/github-corner.css">
+    
+</head>
+<body>
+
+<a href="https://github.com/nodecg/nodecg" class="github-corner" aria-label="View source on Github">
+    <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff;" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <li class="nav-link nav-home-link"><a href="index.html">Home</a></li><li class="nav-heading">Tutorials</li><li class="nav-item"><a href="tutorial-1_what-is-nodecg.html">What is NodeCG?</a></li><li class="nav-item"><a href="tutorial-2_concepts-and-terminology.html">Concepts and Terminology</a></li><li class="nav-item"><a href="tutorial-3_quick-start.html">Quick Start</a></li><li class="nav-item"><a href="tutorial-4_security.html">Security & Authentication</a></li><li class="nav-item"><a href="tutorial-5_manifest.html">package.json Manifest</a></li><li class="nav-item"><a href="tutorial-6_nodecg-configuration.html">NodeCG Configuration</a></li><li class="nav-item"><a href="tutorial-7_using-npm.html">Using npm Dependencies</a></li><li class="nav-item"><a href="tutorial-8_using-bower.html">Using Bower Dependencies</a></li><li class="nav-item"><a href="tutorial-9_bundle-configuration.html">Bundle Configuration</a></li><li class="nav-item"><a href="tutorial-assets.html">Assets</a></li><li class="nav-item"><a href="tutorial-custom-routes.html">Custom Routes</a></li><li class="nav-item"><a href="tutorial-making-dialogs.html">Making Dashboard Dialogs</a></li><li class="nav-item"><a href="tutorial-migrating-0.7-to-0.8.html">Migrating from 0.7 to 0.8</a></li><li class="nav-item"><a href="tutorial-migrating-0.8-to-0.9.html">Migrating from 0.8 to 0.9</a></li><li class="nav-item"><a href="tutorial-migrating-0.9-to-1.0.html">Migrating from 0.9 to 1.0</a></li><li class="nav-item"><a href="tutorial-mounts.html">Mount folders as endpoints</a></li><li class="nav-item"><a href="tutorial-performance-tips.html">Performance Tips</a></li><li class="nav-item"><a href="tutorial-portable-nodecg.html">Portable NodeCG</a></li><li class="nav-item"><a href="tutorial-replicant-schemas.html">Replicant Validation</a></li><li class="nav-item"><a href="tutorial-screenshot-testing.html">Screenshot Testing Graphics</a></li><li class="nav-item"><a href="tutorial-sentry.html">Error Reporting with Sentry.io</a></li><li class="nav-item"><a href="tutorial-sounds.html">Sounds</a></li><li class="nav-item"><a href="tutorial-typescript.html">TypeScript</a></li><li class="nav-item"><a href="tutorial-using-bundlers.html">Using Bundlers</a></li><li class="nav-heading">Classes</li><li class="nav-heading"><span class="nav-item-type type-class">C</span><span class="nav-item-name"><a href="NodeCG.html">NodeCG</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#.waitForReplicants">waitForReplicants</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#findCue">findCue</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#getDialog">getDialog</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#getDialogDocument">getDialogDocument</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#getSocketIOServer">getSocketIOServer</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#listenFor">listenFor</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#log">log</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#mount">mount</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#playSound">playSound</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#readReplicant">readReplicant</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#Replicant">Replicant</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#sendMessage">sendMessage</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#sendMessageToBundle">sendMessageToBundle</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#stopAllSounds">stopAllSounds</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#stopSound">stopSound</a></span></li><li class="nav-item"><span class="nav-item-type type-function">F</span><span class="nav-item-name"><a href="NodeCG.html#unlisten">unlisten</a></span></li>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">package.json Manifest</h1>
+    
+
+    <section>
+
+<header>
+    
+</header>
+
+<article>
+    <p>Every bundle must have a <a href="https://docs.npmjs.com/files/package.json"><code>package.json</code></a>. In addition to the required fields
+like <code>name</code> and <code>version</code> outlined in that link, NodeCG bundles must also have a <code>nodecg</code> object in their <code>package.json</code>
+with some additional properties that tell NodeCG about the bundle and how to load it.</p>
+<p>The <code>nodecg</code> object in a bundle's <code>package.json</code> must follow this structure:</p>
+<pre class="prettyprint source"><code>{
+  &quot;name&quot;: &quot;example-bundle&quot;,
+  ...
+  &quot;nodecg&quot;: {
+    &quot;compatibleRange&quot;: &quot;~0.7.0&quot;,
+    &quot;bundleDependencies&quot;: {
+      &quot;other-bundle&quot;: &quot;^1.2.1&quot;
+    },
+    &quot;dashboardPanels&quot;: [
+      {
+        &quot;name&quot;: &quot;sample-panel&quot;,
+        &quot;title&quot;: &quot;Sample Panel&quot;,
+        &quot;width&quot;: 2,
+        &quot;headerColor&quot;: &quot;#2d4e8a&quot;,
+        &quot;file&quot;: &quot;sample-panel.html&quot;
+      },
+      {
+        &quot;name&quot;: &quot;sample-dialog&quot;,
+        &quot;title&quot;: &quot;Sample Dialog&quot;,
+        &quot;width&quot;: 2,
+        &quot;dialog&quot;: true,
+        &quot;dialogButtons&quot;: [
+          {
+            &quot;name&quot;: &quot;save&quot;,
+            &quot;type&quot;: &quot;confirm&quot;
+          },
+          {
+            &quot;name&quot;: &quot;cancel&quot;,
+            &quot;type&quot;: &quot;dismiss&quot;
+          }
+        ],
+        &quot;file&quot;: &quot;sample-dialog.html&quot;
+      },
+      {
+        &quot;name&quot;: &quot;custom-workspace&quot;,
+        &quot;title&quot;: &quot;Custom Workspace Panel&quot;,
+        &quot;width&quot;: 4,
+        &quot;file&quot;: &quot;custom-workspace.html&quot;,
+        &quot;workspace&quot;: &quot;My Workspace&quot;
+      },
+      {
+        &quot;name&quot;: &quot;fullbleed-panel&quot;,
+        &quot;title&quot;: &quot;Fullbleed Panel&quot;,
+        &quot;fullbleed&quot;: true
+      }
+    ],
+    &quot;graphics&quot;: [
+      {
+        &quot;file&quot;: &quot;index.html&quot;,
+        &quot;width&quot;: 1280,
+        &quot;height&quot;: 720,
+        &quot;singleInstance&quot;: false
+      }
+    ]
+  }
+  ...
+}
+</code></pre>
+<h2 id="nodecg.compatiblerange">nodecg.compatibleRange</h2>
+<p>A <a href="http://semver.org/">semver</a> range that defines which version(s) of NodeCG this bundle is compatible with.
+This bundle will not load in NodeCG versions outside the specified range.</p>
+<p>This field is required.</p>
+<h2 id="nodecg.bundledependencies">nodecg.bundleDependencies</h2>
+<p>Formatted identically to npm's <code>dependencies</code> field, but behaves differently.
+Bundles declared as <code>bundleDependencies</code> are not automatically installed.
+This field's only job is to ensure that dependant bundles are loaded first.
+In the above example, <code>other-bundle</code> would be loaded before <code>example-bundle</code>, and if <code>other-bundle</code> fails to load
+then so will <code>example-bundle</code>.</p>
+<p>This field is only required if your bundle makes use of <a href="NodeCG.html#extensions"><code>NodeCG#extensions</code></a>.</p>
+<h2 id="nodecg.dashboardpanels">nodecg.dashboardPanels</h2>
+<p>An array of objects, each object describing an individual dashboard panel or dialog.
+Every panel and dialog must have a <code>name</code>, <code>title</code>, and <code>file</code>. <code>file</code> is relative to the bundle's <code>dashboard</code> folder.
+<code>width</code> is optional, and defaults to <code>2</code>. The width scale is arbitrary and may change,
+so you'll want to play around with this number to get the desired width.</p>
+<p>Panels also have an optional <code>headerColor</code> property that accepts a hex color string.</p>
+<p>You can split your panels up into multiple <code>workspace</code>s. By default all panels are added to the same workspace.
+If you'd like to specify a different workspace, simply provide a workspace name as the <code>workspace</code> property.
+Workspaces work across bundles. If <code>my-bundle</code> and <code>your-bundle</code> both declare a panel in the <code>Shared Workspace</code>
+workspace, then both of our panels will show up together.</p>
+<p>If you have a really big panel that simply needs to be in its own workspace and have maximized screenspace, give it
+the <code>fullbleed</code> property. Fullbleed panels are put into their own workspace and have no margins around them. This is
+good for when you have a large, complex UI that you need more fine-grained control over.</p>
+<iframe src='https://gfycat.com/ifr/SarcasticDeterminedFugu' frameborder='0' scrolling='no' width='640' height='402' allowfullscreen></iframe>
+<p>To mark a panel as a dialog, it must have the <code>dialog</code> property set to <code>true</code>. Dialogs don't immediately display on the
+dashboard, and must be manually invoked. See <a href="tutorial-making-dialogs.html">Making Dashboard Dialogs</a> for more info.
+(<a href="http://i.imgur.com/xA4mDvF.png">Screenshot of an open dialog</a>)</p>
+<p>Dialogs have special buttons for confirmation and dismissal, which are defined in the <code>dialogButtons</code> property.
+There are only two types of dialogButton: <code>confirm</code> and <code>dismiss</code>. When one of these buttons is pressed, a
+<code>dialog-confirmed</code> or <code>dialog-dismissed</code> event is emitted on the dialog's <code>document</code> to allow for easy handling with
+less boilerplate.</p>
+<p>This field is only required if your bundle has dashboard panels.</p>
+<h2 id="nodecg.graphics">nodecg.graphics</h2>
+<p>An array of objects, each object describing a graphic.
+Each graphic must have a <code>file</code>, <code>width</code>, and <code>height</code>. <code>file</code> is relative to the bundle's <code>graphics</code> folder.
+If you wish to enforce that your graphic only ever be open in one place at a time, set <code>singleInstance</code> to <code>true</code>
+(defaults to <code>false</code>).</p>
+<p>This field is only required if your bundle has graphics.</p>
+</article>
+
+</section>
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.2</a> on Mon Jan 27 2020 20:48:17 GMT-0800 (Pacific Standard Time) using the Minami theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/currentpage.js"></script>
+</body>
+</html>
