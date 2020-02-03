@@ -38,3 +38,5 @@ sequenceDiagram
     User ->> Browser: Uses Dashboard
 ```
 
+![Sequence Diagram](./wiki/img/nodecgDiagram.png)
+
