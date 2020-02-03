@@ -1,0 +1,22 @@
+{
+  "host": "0.0.0.0",
+  "port": 9090,
+  "developer": false,
+  "bundles": {
+    "enabled": [
+      "ssbutw"
+    ]
+  },
+  "logging": {
+    "replicants": false,
+    "console": {
+      "enabled": true,
+      "level": "trace"
+    },
+    "file": {
+      "enabled": true,
+      "path": "logs/server.log",
+      "level": "info"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+# Node / Bower
+/bower_components
+/node_modules
+/build/bower_components
+/build/node_modules
+npm-debug.log
+
+# Logs
+/logs/**
+
+# OS specific
+.DS_Store
+
+# JetBrains IDEs (IntelliJ/WebStorm)
+/.idea/compiler.xml
+/.idea/encodings.xml
+/.idea/copyright/profiles_settings.xml
+/.idea/workspace.xml
+/.idea/shelf/
+/.idea/codeStyles/codeStyleConfig.xml
+
+# Code coverage results
+/coverage
+.nyc_output
+
+# Don't ignore .empty_directory files
+!.empty_directory
+
+#IgnoreNodecg Install
+/smashStream
+/nodecg
