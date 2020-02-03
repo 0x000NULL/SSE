@@ -1,9 +1,0 @@
-{
-  "name": "satisfied-bundle-deps",
-  "nodecg": {
-    "compatibleRange": "^1.0.0",
-    "bundleDependencies": {
-      "test-bundle": "~0.0.1"
-    }
-  }
-}
