@@ -158,8 +158,8 @@ export default {
     z-index: 4;
     top:0px;
     left:0px;
-    width:1280px;
-    height:720px;
+    width:1920px;
+    height:1080px;
   }
 
   #container {

@@ -285,8 +285,8 @@ export default {
   }
 
   .board{
-    width:1280px;
-    height:720px;
+    width:1920px;
+    height:1080px;
     background-repeat: no-repeat;
     position:absolute;
   }
