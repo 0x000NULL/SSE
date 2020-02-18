@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <link rel="import" href="components/nodecg-show-hide/nodecg-show-hide.html">
+    <link rel="import" href="components/nodecg-replicant-input/nodecg-replicant-input.html">
+    <link rel="import" href="components/nodecg-toggle/nodecg-toggle.html">
+    <link rel="stylesheet" href="panel.css">
+    <style>
+    </style>
+</head>
+<body>
+  <nodecg-show-hide></nodecg-show-hide>
+
+  <nodecg-replicant-input label="Hold Time" replicant-name="socialHoldTime"></nodecg-replicant-input>
+
+  <nodecg-toggle replicant-name="socialIntervalEnabled">Play Automatically</nodecg-toggle>
+  <nodecg-replicant-input label="Automatic Interval" replicant-name="socialIntervalGapLength"></nodecg-replicant-input>
+  <script src="panel.js"></script>
+</body>
+</html>
+
+
+
